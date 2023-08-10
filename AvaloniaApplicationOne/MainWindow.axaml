@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:uc="clr-namespace:AvaloniaApplicationOne"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplicationOne.MainWindow"
+        Title="AvaloniaApplicationOne" Background="Black">
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition></ColumnDefinition>
+				<ColumnDefinition></ColumnDefinition>
+				<ColumnDefinition></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition></RowDefinition>
+				<RowDefinition></RowDefinition>
+				<RowDefinition></RowDefinition>
+			</Grid.RowDefinitions>
+			
+			<TextBlock FontWeight="Bold" FontStyle="Italic" Foreground="White" Grid.ColumnSpan="3" FontSize="40" 
+			Background="Black" Text="Simon? More like Timon and Pumba" HorizontalAlignment="Center"/>
+			<uc:UserControl1 Grid.ColumnSpan="2" Grid.Row="1"/>
+			<ComboBox Grid.Row="1" Grid.Column="2" SelectionChanged="titleChanged">
+				<ComboBoxItem>Simon</ComboBoxItem>
+				<ComboBoxItem>Timon</ComboBoxItem>
+				<ComboBoxItem>Pumba</ComboBoxItem>
+			</ComboBox>
+			<uc:MyButton Grid.Row="1" Grid.Column="2" Height="50" Width="100"/>
+			<Calendar Grid.Row="2" Grid.Column="2" VerticalAlignment="Top" 
+					  SelectedDatesChanged="calChanged" SelectionMode="SingleRange"/>
+			<Button Foreground="Black" Content="Click me!" Grid.ColumnSpan="2" Grid.Row="2" Click="buttonClick"
+					Background="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+			<TextBox Foreground="White" Grid.ColumnSpan="2" Grid.Row="2" Width="150" Height="75"
+					HorizontalAlignment="Center" VerticalAlignment="Center" Name="FontBox" TextChanged="changeFontFromText"/>
+		</Grid>
+</Window>

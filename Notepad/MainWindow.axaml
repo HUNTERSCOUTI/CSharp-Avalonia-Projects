@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1420" d:DesignHeight="750"
+        x:Class="Notepad.MainWindow" Icon="C:\Users\zilas\Downloads\notepadLogo.jpg"
+        Title="Untitled - Notepad" Background="White">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="40"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="20"/>
+			<RowDefinition Height="20"/>
+		</Grid.RowDefinitions>
+
+		<Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" BorderThickness="0, 0, 0, 2"
+				BorderBrush="Gray" Background="Transparent">
+			<StackPanel Orientation="Horizontal" VerticalAlignment="Top" Background="Transparent">
+				<Button Content="File"   Foreground="Black" Background="Transparent" Height="30" FontSize="10" />
+				<Button Content="Edit"   Foreground="Black" Background="Transparent" Height="30" FontSize="10" />
+				<Button Content="Format" Foreground="Black" Background="Transparent" Height="30" FontSize="10" />
+				<Button Content="View"   Foreground="Black" Background="Transparent" Height="30" FontSize="10" />
+				<Button Content="Help"   Foreground="Black" Background="Transparent" Height="30" FontSize="10" />
+			</StackPanel>
+		</Border>
+		
+
+	</Grid>
+</Window>
